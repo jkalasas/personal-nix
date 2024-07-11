@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     discord
     inkscape
+	lazygit
     libreoffice
     mpv
     obsidian
