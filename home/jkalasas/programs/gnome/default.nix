@@ -1,7 +1,12 @@
-{pkgs, ...}: {
-  home.packages = with pkgs.gnomeExtensions; [
-    dash-to-dock
-  ];
+{pkgs, ...}: 
+let
+	extensions = with pkgs.gnomeExtensions; [
+		appindicator
+		dash-to-dock
+	];
+in
+{
+  home.packages = extensions;
 
   dconf.settings = {
     "org/gnome/desktop/file-chooser" = {
@@ -36,9 +41,7 @@
 
     "org/gnome/shell" = {
       disable-user-extensions = false;
-      enabled-extensions = with pkgs.gnomeExtensions; [
-        dash-to-dock.extensionUuid
-      ];
+	  enabled-extensions = map (ext: ext.extensionUuid) extensions;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
