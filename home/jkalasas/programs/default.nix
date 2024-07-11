@@ -6,13 +6,24 @@
     ./zsh
   ];
 
-  home.packages = with pkgs; [
-    discord
-    inkscape
-	lazygit
-    libreoffice
-    mpv
-    obsidian
-    telegram-desktop
-  ];
+  home.packages = let
+    apps = with pkgs; [
+      discord
+      gimp
+      inkscape
+      libreoffice
+      mpv
+      obsidian
+      telegram-desktop
+    ];
+
+    dev = with pkgs; [
+      lazygit
+      poetry
+      python3
+      nodejs
+    ];
+    allPkgs = dev ++ apps;
+  in
+    allPkgs;
 }
