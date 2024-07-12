@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     gnome-extension-manager
     gparted
+    gnome.gnome-remote-desktop
   ];
 
   environment.gnome.excludePackages = with pkgs.gnome; [
