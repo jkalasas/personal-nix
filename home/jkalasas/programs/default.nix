@@ -3,6 +3,7 @@
     ./gnome
     ./nvim
     ./tmux
+	./vscode
     ./zsh
   ];
 
