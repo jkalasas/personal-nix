@@ -34,6 +34,11 @@ cmp.setup({
 			end
 		end, { "i", "s" }),
 	}),
+	snippet = {
+		expand = function(args)
+			luasnip.lsp_expand(args.body)
+		end,
+	},
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
