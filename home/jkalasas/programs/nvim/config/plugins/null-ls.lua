@@ -17,12 +17,7 @@ local M = {
 	n = {
 		-- formatter
 		["<leader>fm"] = function()
-			vim.lsp.buf.format({
-				async = true,
-				formatting_options = {
-					tabSize = 4,
-				},
-			})
+			vim.lsp.buf.format({ async = true })
 		end,
 	},
 }

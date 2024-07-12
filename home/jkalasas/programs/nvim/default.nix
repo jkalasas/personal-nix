@@ -55,6 +55,7 @@ in {
         config = readFile ./config/plugins/catppuccin.lua;
       }
 
+      cmp_luasnip
       cmp-nvim-lsp
 
       {
@@ -62,6 +63,8 @@ in {
         type = "lua";
         config = readFile ./config/plugins/comment.lua;
       }
+
+      luasnip
 
       {
         plugin = null-ls-nvim;
