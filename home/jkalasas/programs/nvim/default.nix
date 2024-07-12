@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  readFile = file: builtins.readFile file;
+  readFile = builtins.readFile;
 in {
   programs.neovim = {
     enable = true;
