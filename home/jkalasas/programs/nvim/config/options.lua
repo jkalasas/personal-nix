@@ -48,3 +48,7 @@ local M = {
 }
 
 mapBindings(M)
+
+-- delete word
+vim.api.nvim_set_keymap("!", "<C-BS>", "<C-w>", { noremap = true })
+vim.api.nvim_set_keymap("!", "<C-h>", "<C-w>", { noremap = true })
