@@ -14,8 +14,8 @@ in {
     extraPackages = with pkgs; [
       # language servers
       emmet-ls
-      lua-language-server
       nixd
+      luaPackages.lua-lsp
       nodePackages.intelephense
       nodePackages.pyright
       nodePackages.svelte-language-server
