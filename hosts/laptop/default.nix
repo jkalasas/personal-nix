@@ -4,11 +4,11 @@
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
   };
+  services.gnome.gnome-remote-desktop.enable = true;
 
   environment.systemPackages = with pkgs; [
     gnome-extension-manager
     gparted
-    gnome.gnome-remote-desktop
   ];
 
   environment.gnome.excludePackages = with pkgs.gnome; [
