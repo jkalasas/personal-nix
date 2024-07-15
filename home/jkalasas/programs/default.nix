@@ -3,7 +3,7 @@
     ./gnome
     ./nvim
     ./tmux
-	./vscode
+    ./vscode
     ./zsh
   ];
 
@@ -16,6 +16,7 @@
       mpv
       obsidian
       telegram-desktop
+      tradingview
     ];
 
     dev = with pkgs; [
