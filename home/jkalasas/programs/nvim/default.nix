@@ -73,6 +73,12 @@ in {
       }
 
       {
+        plugin = nvim-autopairs;
+        type = "lua";
+        config = "require('nvim-autopairs').setup()";
+      }
+
+      {
         plugin = nvim-cmp;
         type = "lua";
         config = readFile ./config/plugins/cmp.lua;
