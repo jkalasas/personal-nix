@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./laptop
+	./printing.nix
     ./virtualization.nix
   ];
 
