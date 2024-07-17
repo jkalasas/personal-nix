@@ -1,11 +1,10 @@
-{pkgs, ...}: 
-let
-	extensions = with pkgs.gnomeExtensions; [
-		appindicator
-		dash-to-dock
-	];
-in
-{
+{pkgs, ...}: let
+  extensions = with pkgs.gnomeExtensions; [
+    appindicator
+    dash-to-dock
+    hibernate-status-button
+  ];
+in {
   home.packages = extensions;
 
   dconf.settings = {
@@ -17,6 +16,8 @@ in
       clock-format = "12h";
       color-scheme = "prefer-dark";
     };
+
+    "org/gnome/desktop/remote-desktop/rdp".screen-share-mode = "extend";
 
     "org/gnome/desktop/wm/keybindings" = {
       switch-applications = [];
@@ -41,7 +42,7 @@ in
 
     "org/gnome/shell" = {
       disable-user-extensions = false;
-	  enabled-extensions = map (ext: ext.extensionUuid) extensions;
+      enabled-extensions = map (ext: ext.extensionUuid) extensions;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {

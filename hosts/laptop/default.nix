@@ -5,6 +5,7 @@
     desktopManager.gnome.enable = true;
   };
   services.gnome.gnome-remote-desktop.enable = true;
+  networking.firewall.allowedTCPPorts = [3389];
 
   environment.systemPackages = with pkgs; [
     gnome-extension-manager
