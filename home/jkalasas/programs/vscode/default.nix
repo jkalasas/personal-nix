@@ -8,6 +8,7 @@
 
       # lsp
       ms-python.python
+	  rust-lang.rust-analyzer
       svelte.svelte-vscode
 
       # etc
