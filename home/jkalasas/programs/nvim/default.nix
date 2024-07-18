@@ -20,12 +20,14 @@ in {
       nodePackages.pyright
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
+      rust-analyzer
 
       # formatters
       alejandra # nix
       black # python
       prettierd # web stuff
       stylua # lua
+      rustfmt
 
       # linters
       eslint_d

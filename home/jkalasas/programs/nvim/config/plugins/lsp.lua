@@ -35,8 +35,8 @@ local providers = {
 	"intelephense",
 	"nixd",
 	"pyright",
-	"tsserver",
 	"svelte",
+	"tsserver",
 }
 
 for _, provider in ipairs(providers) do
@@ -57,6 +57,16 @@ lspconfig.lua_ls.setup({
 		Lua = {
 			workspace = { checkThirdParty = false },
 			telemetry = { enable = false },
+		},
+	},
+})
+
+lspconfig.rust_analyzer.setup({
+	settings = {
+		["rust-analyzer"] = {
+			diagnostics = {
+				enable = true,
+			},
 		},
 	},
 })
