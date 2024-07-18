@@ -8,6 +8,10 @@
   ];
 
   home.packages = let
+	cli = with pkgs; [
+		btop
+	];
+
     apps = with pkgs; [
       discord
       gimp
@@ -20,12 +24,15 @@
     ];
 
     dev = with pkgs; [
+      diesel-cli
       lazygit
       poetry
       python3
       nodejs
+	  sqlite
+      rustup
     ];
-    allPkgs = dev ++ apps;
+    allPkgs = dev ++ apps ++ cli;
   in
     allPkgs;
 }
