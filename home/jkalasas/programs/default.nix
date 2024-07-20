@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./direnv
     ./gnome
     ./nvim
     ./tmux
@@ -8,9 +9,9 @@
   ];
 
   home.packages = let
-	cli = with pkgs; [
-		btop
-	];
+    cli = with pkgs; [
+      btop
+    ];
 
     apps = with pkgs; [
       discord
@@ -29,7 +30,7 @@
       poetry
       python3
       nodejs
-	  sqlite
+      sqlite
       rustup
     ];
     allPkgs = dev ++ apps ++ cli;
