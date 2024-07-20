@@ -25,10 +25,9 @@ local on_attach = function(_, bufnr)
 	end, {})
 end
 
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
-capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+-- capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
 
 local providers = {
 	"emmet_ls",
@@ -62,6 +61,8 @@ lspconfig.lua_ls.setup({
 })
 
 lspconfig.rust_analyzer.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 	settings = {
 		["rust-analyzer"] = {
 			diagnostics = {

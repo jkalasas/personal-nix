@@ -58,6 +58,7 @@ in {
       }
 
       cmp_luasnip
+      cmp-buffer
       cmp-nvim-lsp
 
       {
