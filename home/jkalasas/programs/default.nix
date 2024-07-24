@@ -9,10 +9,6 @@
   ];
 
   home.packages = let
-    cli = with pkgs; [
-      btop
-    ];
-
     apps = with pkgs; [
       discord
       gimp
@@ -24,6 +20,11 @@
       tradingview
     ];
 
+    cli = with pkgs; [
+      btop
+      lzip
+    ];
+
     dev = with pkgs; [
       diesel-cli
       lazygit
@@ -33,7 +34,13 @@
       sqlite
       rustup
     ];
-    allPkgs = dev ++ apps ++ cli;
+
+    fonts = with pkgs; [
+      corefonts
+      vistafonts
+    ];
+
+    allPkgs = apps ++ cli ++ dev ++ fonts;
   in
     allPkgs;
 }
