@@ -8,6 +8,7 @@
     enable = true;
     drivers = with pkgs; [
       gutenprint
+	  epson-201401w
     ];
   };
 }
