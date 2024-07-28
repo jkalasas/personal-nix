@@ -6,6 +6,12 @@
   };
   services.gnome.gnome-remote-desktop.enable = true;
   networking.firewall.allowedTCPPorts = [3389];
+  networking.firewall.allowedTCPPortRanges = [
+    {
+      from = 32100;
+      to = 33000;
+    }
+  ];
 
   environment.systemPackages = with pkgs; [
     gnome-extension-manager
@@ -37,4 +43,17 @@
     AllowHybridSleep=no
     AllowSuspendThenHibernate=yes
   '';
+
+  xdg.portal = {
+    enable = true;
+    configPackages = with pkgs; [
+      xdg-desktop-portal-gnome
+    ];
+  };
+
+  programs.weylus = {
+    enable = true;
+    openFirewall = true;
+    users = ["jkalasas"];
+  };
 }

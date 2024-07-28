@@ -52,6 +52,7 @@
     firefox
     git
     vim
+	weylus
   ];
 
   environment.shells = with pkgs; [zsh];
