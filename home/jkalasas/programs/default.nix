@@ -11,11 +11,14 @@
   home.packages = let
     apps = with pkgs; [
       discord
+      dolphin-emu
       gimp
       inkscape
       libreoffice
       mpv
+      ppsspp
       obsidian
+      steam
       telegram-desktop
       tradingview
     ];
@@ -40,7 +43,18 @@
       vistafonts
     ];
 
-    allPkgs = apps ++ cli ++ dev ++ fonts;
+    retroarch-emu = with pkgs; [
+      (retroarch.override {
+        cores = with libretro; [
+          dolphin
+          quicknes
+          snes9x
+          ppsspp
+        ];
+      })
+    ];
+
+    allPkgs = apps ++ cli ++ dev ++ fonts ++ retroarch-emu;
   in
     allPkgs;
 }
