@@ -18,13 +18,13 @@
       mpv
       ppsspp
       obsidian
-      steam
       telegram-desktop
       tradingview
     ];
 
     cli = with pkgs; [
       btop
+      cloudflared
       lzip
     ];
 
@@ -44,12 +44,15 @@
     ];
 
     retroarch-emu = with pkgs; [
+      emulationstation
+      gamemode
       (retroarch.override {
         cores = with libretro; [
           dolphin
+          mupen64plus
+          ppsspp
           quicknes
           snes9x
-          ppsspp
         ];
       })
     ];

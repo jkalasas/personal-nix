@@ -40,6 +40,13 @@
     nixosConfigurations.lappy = lib.nixosSystem rec {
       inherit system;
       modules = [
+        {
+          nixpkgs.config = {
+            permittedInsecurePackages = [
+              "freeimage-unstable-2021-11-01"
+            ];
+          };
+        }
         ./nixos/configuration.nix
         ./hosts
         home-manager.nixosModules.home-manager
