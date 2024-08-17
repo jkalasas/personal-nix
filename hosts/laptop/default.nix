@@ -51,17 +51,25 @@
     ];
   };
 
+  programs.gamescope.enable = true;
+
   programs.steam = {
-  	enable = true;
-	gamescopeSession.enable = true;
-	remotePlay.openFirewall = true;
-	dedicatedServer.openFirewall = true;
-	localNetworkGameTransfers.openFirewall = true;
+    enable = true;
+    gamescopeSession.enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
   };
 
   programs.weylus = {
     enable = true;
     openFirewall = true;
     users = ["jkalasas"];
+  };
+
+  services.sunshine = {
+    enable = true;
+    capSysAdmin = true;
+    openFirewall = true;
   };
 }
