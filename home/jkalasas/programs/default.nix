@@ -10,11 +10,15 @@
 
   home.packages = let
     apps = with pkgs; [
+      audacity
       discord
+	  chromium
       dolphin-emu
       gimp
       inkscape
       libreoffice
+	  lutris
+	  motrix
       mpv
       ppsspp
       obsidian
@@ -26,16 +30,22 @@
       btop
       cloudflared
       lzip
+	  xclip
+	  wl-clipboard
     ];
 
     dev = with pkgs; [
       diesel-cli
       lazygit
+	  php
       poetry
       python3
       nodejs
       sqlite
       rustup
+
+	  nodePackages.live-server
+	  phpPackages.composer
     ];
 
     fonts = with pkgs; [
@@ -49,6 +59,8 @@
       (retroarch.override {
         cores = with libretro; [
           dolphin
+		  fbneo
+          flycast
           mupen64plus
           ppsspp
           quicknes
