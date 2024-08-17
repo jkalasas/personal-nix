@@ -14,6 +14,7 @@
     extraConfig = ''
       set-option -sa terminal-overrides ",xterm*:Tc"
       set -g mouse on
+	  set -s command-alias[99] 'load-buffer=load-buffer -w'
 
       # Prefix
       #unbind C-b
