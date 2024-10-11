@@ -5,7 +5,7 @@
     desktopManager.gnome.enable = true;
   };
   services.gnome.gnome-remote-desktop.enable = true;
-  networking.firewall.allowedTCPPorts = [3389];
+  networking.firewall.allowedTCPPorts = [3389 139 445 5984];
   networking.firewall.allowedTCPPortRanges = [
     {
       from = 32100;
@@ -35,6 +35,13 @@
       intel-media-driver
       intel-compute-runtime
     ];
+  };
+
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.settings = {
+    General = {
+      Experimental = true;
+    };
   };
 
   systemd.sleep.extraConfig = ''

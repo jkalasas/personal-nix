@@ -20,6 +20,7 @@ in {
       nodePackages.pyright
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
+	  nodePackages.volar
       rust-analyzer
 
       # formatters

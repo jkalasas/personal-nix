@@ -3,6 +3,7 @@
     appindicator
     dash-to-dock
     hibernate-status-button
+	gsconnect
   ];
 in {
   home.packages = extensions;

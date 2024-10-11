@@ -49,10 +49,15 @@
   programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
+  	distrobox
     firefox
     git
+	openvpn
+	qemu
+	quickemu
     vim
 	weylus
+	libewf
   ];
 
   environment.shells = with pkgs; [zsh];

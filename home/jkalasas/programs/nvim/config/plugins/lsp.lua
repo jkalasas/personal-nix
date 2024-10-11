@@ -36,6 +36,7 @@ local providers = {
 	"pyright",
 	"svelte",
 	"tsserver",
+	"volar",
 }
 
 for _, provider in ipairs(providers) do

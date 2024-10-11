@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   programs.vscode = {
     enable = true;
+	enableExtensionUpdateCheck = false;
+	enableUpdateCheck = false;
     extensions = with pkgs.vscode-extensions; [
       # formatters
       esbenp.prettier-vscode
@@ -8,8 +10,10 @@
 
       # lsp
       ms-python.python
-	  rust-lang.rust-analyzer
+      prisma.prisma
+      rust-lang.rust-analyzer
       svelte.svelte-vscode
+      bmewburn.vscode-intelephense-client
 
       # etc
       ms-python.isort
