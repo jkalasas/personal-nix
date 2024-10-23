@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./laptop
-	./printing.nix
+    ./printing.nix
     ./virtualization.nix
   ];
 
@@ -9,6 +9,7 @@
   programs.adb.enable = true;
   programs.nix-ld.enable = true;
 
+  services.flatpak.enable = true;
   services.gvfs.enable = true;
   services.udisks2.enable = true;
 

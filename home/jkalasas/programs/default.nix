@@ -25,10 +25,10 @@
       hoppscotch
       inkscape
       libreoffice
-      libz
       lutris
       motrix
       mpv
+	  ngrok
       postman
       ppsspp
 	  obs-studio

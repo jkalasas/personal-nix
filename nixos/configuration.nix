@@ -49,6 +49,7 @@
   programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
+  	barrier
   	distrobox
     firefox
     git
